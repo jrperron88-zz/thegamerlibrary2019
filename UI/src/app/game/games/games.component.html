@@ -1,0 +1,18 @@
+<h1>Games</h1>
+
+<p *ngIf="!games"><em>Loading...</em></p>
+
+<table class='table' *ngIf="games">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let game of games">
+      <td>{{ game.id }}</td>
+      <td>{{ game.name }}</td>
+    </tr>
+  </tbody>
+</table>
