@@ -41,6 +41,21 @@
                                 "replace": "src/environments/environment.ts",
                                 "with": "src/environments/environment.prod.ts"
                             }]
+                        },
+                        "staging": {
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "aot": true,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "fileReplacements": [{
+                                "replace": "src/environments/environment.ts",
+                                "with": "src/environments/environment.staging.ts"
+                            }]
                         }
                     }
                 },
@@ -52,6 +67,9 @@
                     "configurations": {
                         "production": {
                             "browserTarget": "admin-angular:build:production"
+                        },
+                        "staging": {
+                            "browserTarget": "admin-angular:build:staging"
                         }
                     }
                 },
